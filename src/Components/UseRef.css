@@ -1,0 +1,14 @@
+.ref{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 70px;
+    gap: 20px;
+}
+
+
+.ref button{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+}

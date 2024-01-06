@@ -1,4 +1,7 @@
 import React, { useState, useRef } from 'react'
+import "./UseRef.css"
+
+
 
 export const UseRef = () => {
     const [count, setCount] = useState(0);
@@ -18,7 +21,7 @@ export const UseRef = () => {
 
   return (
     <div className='ref'>
-        Count: {count}
+        <h2>Count: {count}</h2>
         <button onClick={handleIncrement}>Increment</button>
     </div>
   )
