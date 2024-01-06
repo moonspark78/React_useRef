@@ -12,3 +12,8 @@
     height: 40px;
     font-size: 20px;
 }
+
+.ref input{
+    width: 500px;
+    padding: 5px;
+}

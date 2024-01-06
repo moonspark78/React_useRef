@@ -22,7 +22,8 @@ export const UseRef = () => {
   return (
     <div className='ref'>
         <h2>Count: {count}</h2>
-        <button onClick={handleIncrement}>Increment</button>
+        <button onClick={handleIncrement}>Increment</button> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <input type='text' placeholder='Type Something ....'/>
     </div>
   )
 }
