@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import "./UseRef.css"
 
 
@@ -6,15 +6,18 @@ import "./UseRef.css"
 export const UseRef = () => {
     const [count, setCount] = useState(0);
     const countRef = useRef(0);
+    const inputRef = useRef(null);
 
     const handleIncrement = () => {
-
         setCount(count+1);
         countRef.current++;
-
-        console.log("State", count);
-        console.log("Ref", countRef.current);
+       /*  console.log("State", count);
+        console.log("Ref", countRef.current); */
     };
+
+    useEffect(() => {
+        inputRef.current?.focus();
+    },[]);
 
 
 
@@ -23,7 +26,7 @@ export const UseRef = () => {
     <div className='ref'>
         <h2>Count: {count}</h2>
         <button onClick={handleIncrement}>Increment</button> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <input type='text' placeholder='Type Something ....'/>
+        <input ref={inputRef} type='text' placeholder='Type Something ....'/>
     </div>
   )
 }
